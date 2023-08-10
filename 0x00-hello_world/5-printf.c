@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *Main - Enterypoint for this code
+ *main - Entery point for this code
  *
  *Description: pusts for cop the
  *Return: Always 0 (success)
