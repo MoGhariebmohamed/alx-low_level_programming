@@ -3,7 +3,7 @@
  *main - enterypoint for this code
  *
  *description: pusts for cop the
- *return: always zero value
+ *return: always 0 (success)
 */
 int main(void)
 {

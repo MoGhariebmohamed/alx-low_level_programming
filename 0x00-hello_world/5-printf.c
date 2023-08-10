@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
-*main - entry point forrepeating
-*
-*return:always zero return
+ *main - enterypoint for this code
+ *
+ *description: pusts for cop the
+ *return: always 0 (success)
 */
 	int main(void)
 	{
