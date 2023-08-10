@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
-* main enter integr
-* pusts for cop the
-* return zero value
+ *main-enterypoint for this code
+ *
+ *description:pusts for cop the
+ *return:always zero value
 */
 int main(void)
 {
