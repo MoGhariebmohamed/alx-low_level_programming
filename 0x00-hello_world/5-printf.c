@@ -2,7 +2,7 @@
 /**
 *main - entry point forrepeating
 *
-*return:always 0 return 
+*return:always zero return
 */
 int main(void)
 {
