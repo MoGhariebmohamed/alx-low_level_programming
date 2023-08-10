@@ -2,7 +2,7 @@
 /**
 * main enter integr
 * pusts for cop the
-* return zero
+* return zero value
 */
 int main(void)
 {
