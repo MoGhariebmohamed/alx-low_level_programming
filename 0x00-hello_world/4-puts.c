@@ -1,3 +1,4 @@
+/*the command for initiate puzzle*/
 #include <stdio.h>
 int main(void)
 {
