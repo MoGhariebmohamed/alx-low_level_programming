@@ -1,5 +1,7 @@
 #include <stdio.h>
-/** the initiate for main value
+/** 
+*main entry point
+*return : always 0
 */
 int main(void)
 {
