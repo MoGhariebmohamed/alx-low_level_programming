@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- *main-enterypoint for this code
+ *main - enterypoint for this code
  *
- *description:pusts for cop the
- *return:always zero value
+ *description: pusts for cop the
+ *return: always zero value
 */
 int main(void)
 {
