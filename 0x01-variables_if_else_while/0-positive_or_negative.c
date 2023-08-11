@@ -5,10 +5,10 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - for enter point
+ *main - for enter point
  *
- * Description: this code for check positive pr neg
- * return: 0 sucess
+ *Description: this code for check positive pr neg
+ *Return: 0 sucess
  */
 int main(void)
 {
