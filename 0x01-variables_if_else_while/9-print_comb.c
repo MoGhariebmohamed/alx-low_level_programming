@@ -14,8 +14,11 @@ int main(void)
 		putchar(no + '0');
 		no++;
 		if (no <= 9)
+
+		{
 		putchar(',');
 		putchar(' ');
+		}
 	}
 	return (0);
 }
