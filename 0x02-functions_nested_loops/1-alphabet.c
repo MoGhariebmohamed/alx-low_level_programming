@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *main - the main function to print lowercase alphapet
+ *print_alphabet - the main function to print lowercase alphapet
  *
  *description: this function to print putchar
  *Return: 0 sucess
