@@ -6,8 +6,7 @@
  *description: this function to print putchar
  *Return: 0 sucess
  */
-int main(void)
-
+void print_alphabet(void)
 {
 
 		int i = 'a';
@@ -19,5 +18,4 @@ int main(void)
 			i++;
 		}
 		_putchar('\n');
-		return (0);
 }
