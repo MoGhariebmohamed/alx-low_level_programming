@@ -8,20 +8,19 @@
 int main(void)
 {
 	int no = 0;
-	int no2 = 1;
+	int no2;
 
 	while (no < 10)
 	{
-		while (no2 < 10)
+		for (no2 = no + 1; no2 < 10; no2++)
 		{
 		putchar(no + '0');
 		putchar(no2 + '0');
-		if (no != 9 && no2 != 9)
+		if (no != 9 || no2 != 9)
 		{
 		putchar(',');
 		putchar(' ');
 		}
-		no2++;
 		}
 		no++;
 	}
