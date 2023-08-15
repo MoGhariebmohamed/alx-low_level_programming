@@ -2,7 +2,7 @@
 /**
  *main - the main function here
  *
- *description: the printing for charachter alpha
+ *description: the printing for charachter three possibibilties for 3-digits
  *Return: 0 sucess
  */
 int main(void)
@@ -17,14 +17,14 @@ int main(void)
 		{
 			for (no3 = no2 + 1; no3 < 10; no3++)
 			{
-		putchar(no + '0');
-		putchar(no2 + '0');
-		putchar(no3 + '0');
-		if (no != 7 || no2 != 8 || no3 != 9)
-		{
-		putchar(',');
-		putchar(' ');
-		}
+				putchar(no + '0');
+				putchar(no2 + '0');
+				putchar(no3 + '0');
+				if (no != 7 || no2 != 8 || no3 != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 		no++;
