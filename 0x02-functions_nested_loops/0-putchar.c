@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  *main - the main function to print putchar
@@ -11,7 +11,7 @@ int main(void)
 {
 	char name[] = "_putchar";
 
-		int i = 0i;
+		int i = 0;
 
 		while (i < 8)
 
