@@ -16,7 +16,7 @@ int main(void)
 		{
 		putchar(no + '0');
 		putchar(no2 + '0');
-		if (no != 9 || no2 != 9)
+		if (no != 8 || no2 != 9)
 		{
 		putchar(',');
 		putchar(' ');
