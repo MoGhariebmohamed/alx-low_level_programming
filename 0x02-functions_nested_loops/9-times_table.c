@@ -16,12 +16,22 @@ while (n <= 9)
 	i = 0;
 	while (i <= 9)
 	{
-		x = (i * n);
-		_putchar(x + '0');
-		if (i != 9 && n != 9)
+		x = i * n;
+
+		if (x <= 9)
 		{
-		_putchar(',');
-		_putchar(' ');
+			_putchar(x + '0');
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+		}
+
+		else
+		{
+			_putchar((x / 10) + '0');
+			_putchar((x % 10) + '0');
+			_putchar(',');
+			_putchar(' ');
 		}
 		i++;
 	}
