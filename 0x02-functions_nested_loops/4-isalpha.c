@@ -4,7 +4,7 @@
  *_isalpha - the main function to print lowercase alphapet
  *@c: is avriable to check
  *description: this function to print putchar
- *Return: 0 sucess
+ *Return: 1 sucess for lower and upper, 0 for else
  */
 int _isalpha(int c)
 {

@@ -4,7 +4,7 @@
  *print_sign - the main function to print lowercase alphapet
  *@n: is avriable to check
  *description: this function to print putchar
- *Return: 0 sucess
+ *Return: 0 for +ve, 1 for -ve, 0 for zero
  */
 int print_sign(int n)
 {
