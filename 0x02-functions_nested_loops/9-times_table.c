@@ -24,6 +24,7 @@ while (n <= 9)
 			_putchar(',');
 			_putchar(' ');
 			_putchar(' ');
+			_putchar(' ');
 		}
 
 		else
@@ -31,7 +32,6 @@ while (n <= 9)
 			_putchar((x / 10) + '0');
 			_putchar((x % 10) + '0');
 			_putchar(',');
-			_putchar(' ');
 			_putchar(' ');
 		}
 		i++;
