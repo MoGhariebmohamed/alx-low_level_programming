@@ -15,7 +15,7 @@ while (n <= 9)
 	i = 0;
 	while (i <= 9)
 	{
-		_putchar(i);
+		_putchar(i + '0');
 		_putchar(',');
 		_putchar(' ');
 		i++;
