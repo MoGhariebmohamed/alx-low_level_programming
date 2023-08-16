@@ -22,5 +22,16 @@ while (n <= 98)
 	}
 	n++;
 }
-/**	printf("\n");*/
+while (n > 98)
+{
+	if (n != 98)
+	{
+		printf("%d, ", n);
+	}
+	else if (n == 98)
+	{
+		printf("%d\n", n);
+	}
+	n--;
+}
 }
