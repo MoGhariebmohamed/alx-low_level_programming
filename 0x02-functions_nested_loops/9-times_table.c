@@ -10,17 +10,22 @@ void times_table(void)
 {
 int n = 0;
 int i;
+int x;
 while (n <= 9)
 {
 	i = 0;
 	while (i <= 9)
 	{
-		_putchar(i + '0');
+		x = (i * n);
+		_putchar(x + '0');
+		if (i != 9 && n != 9)
+		{
 		_putchar(',');
 		_putchar(' ');
+		}
 		i++;
 	}
-	_putchar('\n');:x
+	_putchar('\n');
 	n++;
 }
 }
