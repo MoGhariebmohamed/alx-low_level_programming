@@ -20,7 +20,7 @@ while (n <= 9)
 		_putchar(' ');
 		i++;
 	}
-	_putchar('\n');
+	_putchar('\n');:x
 	n++;
 }
 }
