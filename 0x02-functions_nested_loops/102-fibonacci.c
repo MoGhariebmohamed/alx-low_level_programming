@@ -12,17 +12,17 @@ unsigned long t = 0;
 unsigned long x;
 	int c = 0;
 
-	while (c <= 50)
+	while (c < 50)
 	{
 		x = n + t;
 printf("%lu", x);
-n = t;
-t = x;
-if (c != 50)
+t = n;
+n = x;
+if (c != 49)
 {
 	printf(", ");
 }
-else if (c == 50)
+else if (c == 49)
 {
 	printf("\n");
 }
