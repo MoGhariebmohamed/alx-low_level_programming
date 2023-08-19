@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *print_numbers - for printing series no
+ *print_number - for printing series no
  *@n: no to be printed
  *description: this function for print nomber
  *Return: void
