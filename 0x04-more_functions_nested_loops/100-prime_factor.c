@@ -12,15 +12,14 @@ int main(void)
 
 	for (x = 2; x <= z; x++)
 	{
-		if (z % x == 0 )
+		if (z % x == 0)
 		{
 			z = z / x;
 			x--;
 		}
 	}
-		printf("%ld", x);
+		printf("%ld\n", x);
 
 
-	printf("\n");
 	return (0);
 }
