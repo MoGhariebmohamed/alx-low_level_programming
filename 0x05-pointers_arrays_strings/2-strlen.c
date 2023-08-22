@@ -3,14 +3,14 @@
  *_strlen - for reset value swap
  *description: this function for charachter check
  *@s: the int pointer for a string location
- *Return: 0 success
+ *Return: x success
  */
 
 int _strlen(char *s)
 {
-	char x;
+	int x;
 
-	for (x = 0; *s != 0; x++)
+	for (x = 0; *s != '\0'; x++)
 	{
 		s++;
 	}
