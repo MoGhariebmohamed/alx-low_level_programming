@@ -7,16 +7,16 @@
  *Return: void
  */
 
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src)
 {
 	int x;
 	int y;
 
-	for (x = 0; dest[c]; x++)
+	for (x = 0; dest[x]; x++)
 		;
-	for (y = 0; srec[y]; y++)
+	for (y = 0; src[y]; y++)
 
-	dest[c] = src[y];
-	c++;
-	return (dset);
+	dest[x] = src[y];
+	x++;
+	return (dest);
 }
