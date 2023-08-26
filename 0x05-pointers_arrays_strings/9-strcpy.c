@@ -1,24 +1,20 @@
 #include "main.h"
 /**
- *_strcpy - for change array content
- *description: this function for print half string new line
- *@src: the char  pointer for a string location
- *@dest: the new position
- *Return: void
+ *_strcpy - for copy  elements of array
+ *description: this function for copy elemnts of src array 
+ *@src: the char  pointer for an array
+ *@dest: the char for new elements of array
+ *Return: dest success
  */
 
 char *_strcpy(char *dest, char *src)
 {
 	int x;
 
-	for (x = -1; src[x] != '\0'; x++)
+	for (x = 0;*(src + x) != '\0'; x++)
 	{
-		if (src[x] == '\0')
-		{
-			dest[x]  = src[x];
-		}
-		else if (src[x] == '\0')
-		break;
+		*(dest + x) = *(src + x);
 	}
-		return (dest);
+	*(dest + x) = '\0';
+	return (dest);
 }
