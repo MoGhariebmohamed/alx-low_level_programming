@@ -18,7 +18,7 @@ int _atoi(char *s)
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
-			y = (*s - 48);
+			y = (*s * 10) + (*s - 48);
 		}
 		else if (y > 0)    /*as an ascii point not 0 */
 			break;
