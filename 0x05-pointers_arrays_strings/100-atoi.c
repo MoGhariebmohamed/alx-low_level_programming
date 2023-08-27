@@ -16,9 +16,9 @@ int _atoi(char *s)
 		{
 			x = x * (-1);
 		}
-		else if (*s >= '0' && *s <= '9')
+		else if (*s >= 48 && *s <= 57)
 		{
-			y = (*s * 10) + (*s - 48);
+			y = (y * 10) + (*s - 48);
 		}
 		else if (y > 0)    /*as an ascii point not 0 */
 			break;
