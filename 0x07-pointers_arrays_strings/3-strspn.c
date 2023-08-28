@@ -4,7 +4,7 @@
  *description: this function for locating char in string
  *@s: the string to be printed
  *@accept: the location of the sub string
- *Return: unsigned int  succes 
+ *Return: unsigned int  succes
  */
 unsigned int _strspn(char *s, char *accept)
 {
