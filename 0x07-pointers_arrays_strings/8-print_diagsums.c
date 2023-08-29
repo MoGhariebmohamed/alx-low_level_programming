@@ -19,7 +19,6 @@ void print_diagsums(int *a, int size)
 		dright = dright + a[size - 1 - x];
 		a = size + a;
 	}
-	printf("%d ", dleft);
-	printf("%d\n", dright);
+	printf("%d, %d\n", dleft, dright);
 }
 
