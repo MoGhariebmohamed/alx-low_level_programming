@@ -7,16 +7,28 @@
  */
 int is_prime_number(int n)
 {
-	if (y < 0)
-	{
-		return (-1);
-	}
-	else if (y == 0)
+	return (prime_number(2, n));
+}
+/**
+ *prime_number - for loop of prime
+ *description: for looping on prime check
+ *@x: looping step
+ *@y: original no
+ *Return: int 0 finish or 1
+ */
+int prime_number(int x, int y)
+{
+
+	if (x >= y && y > 1)
 	{
 		return (1);
 	}
+	else if (x % y == 0 || y < 0)
+	{
+		return (0);
+	}
 	else
 	{
-		return (x * _pow_recursion(x, y - 1));
+		return (prime_number(x + 1, y));
 	}
 }
