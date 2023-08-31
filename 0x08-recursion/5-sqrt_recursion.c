@@ -7,16 +7,30 @@
  */
 int _sqrt_recursion(int n)
 {
-	if (y < 0)
+	return (root(0, n));
+}
+
+/**
+ *root - for get direct root by recursion on sqrt_recursion
+ *descriptiom: this is a second function to recursion
+ *@x: this is a loop integer
+ *@y: for value 
+ *Return: teh x value
+ */
+
+
+int root(int x, int y)
+{
+	if (x * x == y)
 	{
-		return (-1);
+		return (x);
 	}
-	else if (y == 0)
+	else if (x * x < y)
 	{
-		return (1);
+		return (root(x + 1, y));
 	}
 	else
 	{
-		return (x * _pow_recursion(x, y - 1));
+		return (-1);
 	}
 }
