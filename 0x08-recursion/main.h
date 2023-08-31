@@ -12,4 +12,7 @@ int _sqrt_recursion(int n);
 int root(int x, int y);
 int is_prime_number(int n);
 int prime_number(int x, int y);
+int string_check(char *s);
+int is_palindrome(char *s);
+int find(char *string, int first, int last, int rest);
 #endif
