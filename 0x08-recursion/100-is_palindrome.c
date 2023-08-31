@@ -48,7 +48,7 @@ int string_check(char *s)
 
 	if (*s >= '\0')
 	{
-		y = y + string_check(s + 1) +1;
+		y = y + string_check(s + 1) + 1;
 	}
 	return (y);
 }
