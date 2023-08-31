@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
  *root - for get direct root by recursion on sqrt_recursion
  *descriptiom: this is a second function to recursion
  *@x: this is a loop integer
- *@y: for value 
+ *@y: for value
  *Return: teh x value
  */
 
