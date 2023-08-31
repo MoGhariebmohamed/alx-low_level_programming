@@ -15,4 +15,5 @@ int prime_number(int x, int y);
 int string_check(char *s);
 int is_palindrome(char *s);
 int find(char *string, int first, int last, int rest);
+int wildcmp(char *s1, char *s2);
 #endif
