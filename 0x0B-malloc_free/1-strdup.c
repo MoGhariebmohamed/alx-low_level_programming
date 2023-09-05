@@ -21,13 +21,13 @@ char *_strdup(char *str)
 		dstring = malloc(sizeof(*str) * x);
 	}
 	if (dstring == NULL)
+	{
 		return (NULL);
-	else 
+	}
+		else
 	{
 		for (y = 0; y <= x; y++)
-		{
-			dstring[y] = str[x];
-		}
+			dstring[y] = str[y];
 	}
 	return (dstring);
 }
