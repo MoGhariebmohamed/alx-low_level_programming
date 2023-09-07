@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	}
 	c = atoi(argv[1]);
-	while (c < 0)
+	while (c > 0)
 	{
 		r++;
 		if ((c - 25) >= 0)
