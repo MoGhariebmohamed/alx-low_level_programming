@@ -10,24 +10,41 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 1;
-
-	for (i = 1; i < argc; i++)
+	int r;
+	int c = 0;
+	
+	if (argc != 2)
 	{
-			if (argc != 2)
-			{
-				printf("Error\n");
-				return (1);
+		printf("Error\n");
+		return (1);
 
-			}
-			if (*argv[i] <= '0')
-			{
-				printf("0\n");
-			}
-		}/**
-		total += atoi(argv[i]);
 	}
-		printf("%d\n", total);*/
-		return (0);
-		
+	c = atoi(argv[1]);
+	while (c < 0)
+	{
+		r++;
+		if ((c - 25) >= 0)
+		{
+			c = c - 25;
+			continue;
+		}
+		if ((c - 10) >= 0)
+		{
+			c = c - 10;
+			continue;
+		}
+		if ((c - 5) >= 0)
+		{
+			c = c - 5;
+			continue;
+		}
+		if ((c - 2) >= 0)
+		{
+			c -= 2;
+			continue;
+		}
+		c++;
+	}
+	printf("%d\n", r);
+	return (0);
 }
