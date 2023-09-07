@@ -39,6 +39,5 @@ char *str_concat(char *s1, char *s2)
 			dstring[x] = s2[y];
 			x++;
 		}
-		dstring[x] = '\n';
 	return (dstring);
 }
