@@ -21,6 +21,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	else
+	{
 	for (x = 0; s1[x] != '\0'; x++)
 		;
 	for (y = 0; s2[y] != '\0'; y++)
@@ -30,6 +32,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+	else
+	{
 		for (x = 0; s1[x] != '\0'; x++)
 		{
 			dstring[x] = s1[x];
@@ -39,5 +43,7 @@ char *str_concat(char *s1, char *s2)
 			dstring[x] = s2[y];
 			x++;
 		}
+	}
+	}
 	return (dstring);
 }
