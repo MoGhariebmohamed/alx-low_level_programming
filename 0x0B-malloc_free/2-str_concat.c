@@ -15,11 +15,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = "\0";
 	}
 	else if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = "\0";
 	}
 	for (x = 0; s1[x] != '\0'; x++)
 		;
@@ -39,5 +39,6 @@ char *str_concat(char *s1, char *s2)
 			dstring[x] = s2[y];
 			x++;
 		}
+		dstring[x] = '\n';
 	return (dstring);
 }
