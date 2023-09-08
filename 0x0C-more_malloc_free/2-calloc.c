@@ -10,19 +10,19 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *arr;
-	int *y;
+	char *y;
 	unsigned int x;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	arr = malloc(sizeof(int) * size * nmemb);
+	arr = malloc(size * nmemb);
 	if (arr == 0)
 		return (NULL);
 	y = arr;
 	for (x = 0; x < (size * nmemb); x++)
-		y[x] = '0';
+		*(y + x)= 0;
 
 	return (arr);
 }
