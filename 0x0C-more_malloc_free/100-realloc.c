@@ -33,16 +33,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		}
 		return (arr);
 	}
-	newptr = ptr;
-	arr = malloc(sizeof(newptr) * new_size);
-	if (arr == 0)
+	else if (new_size > old_size)
 	{
-		free(ptr);
-		return (NULL);
-	}
-	newarr = arr;
-	for (x = 0; x < old_size && x < new_size; x++)
-	newarr[x] = newptr[x];
+		newptr = ptr;
+		arr = malloc(new_size);
+		if (arr == 0)
+		{
+			free(ptr);
+			return (NULL);
+		}
+		newarr = arr;
+		for (x = 0; x < old_size && x < new_size; x++)
+		newarr[x] = newptr[x];
+
 	free(ptr);
+	}
 	return (arr);
 }
