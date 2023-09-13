@@ -8,7 +8,10 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != NULL && f != NULL && *name != '\0')
+	if (name == NULL || f == NULL || *name == '\0')
+	{
+		return;
+	}
 
 	f(name);
 }
