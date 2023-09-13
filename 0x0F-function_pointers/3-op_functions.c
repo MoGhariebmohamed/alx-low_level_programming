@@ -1,5 +1,5 @@
 #include "3-calc.h"
-#include <stlib.h>
+#include <stdlib.h>
 /**
 *op_add - for add 2 int
 *description: this function to add 2 parameters
@@ -34,8 +34,8 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 /**
-*op_mul - for multiply 2 int
-*description: this function to multiply 2 parameters
+*op_mod - for remainig of division 2 int
+*description: this function remainig of division 2 parameters
 *@a: integer 1
 *@b: integer 2
 *Return: int

@@ -1,25 +1,35 @@
 #include "3-calc.h"
-#include <stlib>
+#include <stdlib.h>
+#include <stdio.h>
 /**
  *main - for excute the calculations
  *description: function executes the calculations
- *@s: pointer to an array
- *Return: pointer to function
+ *@argc: pointer to number of argv
+ *@argv: argument array
+ *Return:0 is ok
  */
-int main(int, int)
+int main(int argc, char **argv)
 {
-	op_t ops[] = {
-        {"+", op_add},
-        {"-", op_sub},
-        {"*", op_mul},
-        {"/", op_div},
-        {"%", op_mod},
-        {NULL, NULL}
-    };
-    int i;
+	int (*function)(int, int), a, b;
 
-	while (ops[i].op != NULL && ops[i].op != *s)
-	i++;
-
-	return (ops[i]);
+	if (argc != 1)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	function = get_op_func(argv[2]);
+	if (function == NULL || argv[1][0] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	if ((argv[2][0] == '/' && a == 0) || (argv[2][0] == '%' && b == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", function(a, b));
+	return (0);
 }
