@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 		if (i == y - 1)
 			continue;
 		printf(" ");
+		x++;
 	}
 	printf("\n");
 	return (0);
