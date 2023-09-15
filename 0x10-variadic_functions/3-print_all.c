@@ -2,18 +2,20 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- *print_strings - prints string
- *description:  function that prints string, followed by a new line
- *@separator: the string to be printed between numbers
+ *print_all - prints everything
+ *description:  function that prints all types of input, followed by a new line
+ *@format: the string to be printed between numbers
  *@n: number of integers passed to the function
  *Return: void
  */
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
 	va_list all;
 	unsigned int x;
 	char *y;
 
+	if (n == 0)
+		return;
 	va_start(all, n);
 	for (x = 0; x < n; x++)
 	{
