@@ -2,13 +2,13 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- *print_numbers - prints numbers
- *description:  function that prints numbers, followed by a new line
+ *print_string - prints string
+ *description:  function that prints string, followed by a new line
  *@separator: the string to be printed between numbers
  *@n: number of integers passed to the function
  *Return: void
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list all;
 	unsigned int x;
