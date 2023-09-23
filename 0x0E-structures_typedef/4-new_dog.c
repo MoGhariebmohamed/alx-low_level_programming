@@ -70,4 +70,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		mem->age = age;
 		mem->owner = getstring(mem->owner, owner);
 		return (mem);
+		free(mem);
+		free(mem->name);
+		free(mem->owner);
 }
