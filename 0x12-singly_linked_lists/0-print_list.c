@@ -10,11 +10,11 @@ int getlength(char *string)
 
 	if (string == NULL)
 	return (0);
-	for (x = 0; *string != '\0'; x++)
+	for (x = 0; string[x] != '\0'; x++)
 	{
-		x += x ;
+		x += 1;
 	}
-	return (x);
+		return (x);
 	
 }
 /**
@@ -27,18 +27,15 @@ size_t print_list(const list_t *h)
 {
 	size_t x = 0;
 
-	while (h != NULL)
+	if (h->str == NULL)
 	{
-		if (h->str != NULL)
-		{
-		printf("[%d] %s\n", getlength(h->str), h->str);
-		}
-		else if (h->str == NULL)
-		{
-			printf("[%d] %s\n", getlength(h->str), "nil");
-		}
-		h = h->next;
-		x++;
+		printf("[%d] %s\n", getlength(h->str), "nil");
 	}
+	for (x = 0; h->str != NULL; x++)
+	{
+		printf("[%d] %s\n", getlength(h->str), h->str);
+		h = h->next;
+	}
+	
 	return (x);
 }
