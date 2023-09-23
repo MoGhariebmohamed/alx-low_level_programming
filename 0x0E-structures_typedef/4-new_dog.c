@@ -30,8 +30,8 @@ char *getstring(char *new, char *old)
 	for (x = 0; old[x] != '\0'; x++)
 	{
 		new[x] = old[x];
+	new[x] += '\0';
 	}
-	new[x] = '\0';
 	return (new);
 
 }
