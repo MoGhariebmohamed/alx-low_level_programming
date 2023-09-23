@@ -31,7 +31,7 @@ char *getstring(char *new, char *old)
 	{
 		new[x] = old[x];
 	}
-	new[x] = '\0';
+	new[x] += '\0';
 	return (new);
 
 }
