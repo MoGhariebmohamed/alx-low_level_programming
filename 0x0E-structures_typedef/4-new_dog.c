@@ -10,9 +10,9 @@ int length(char *string)
 {
 	int i;
 
-	for (i = 0; string[i] < '\0'; i++)
+	for (i = 0; string[i] != '\0'; i++)
 	{
-		string[i]++;
+	(void)*string++;
 	}
 	return (i);
 }
@@ -27,7 +27,7 @@ char *getstring(char *new, char *old)
 {
 	int x;
 
-	for (x = 0; old[x] == '\0'; x++)
+	for (x = 0; old[x] != '\0'; x++)
 	{
 		new[x] = old[x];
 	}
