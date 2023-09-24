@@ -16,9 +16,8 @@ list_t *add_node(list_t **head, const char *str)
 	node = malloc(sizeof(list_t));
 	duplicate = strdup(str);
 	if (node == NULL || duplicate == NULL)
-	{
-	       return (NULL);
-	}
+		return (NULL);
+
 	for (x = 0; str[x]; x++)
 	{
 		(*node).str = duplicate;
