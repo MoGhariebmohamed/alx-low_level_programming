@@ -4,7 +4,7 @@
  *description: the function to get length of a string
  *@string: a pointer to string
  *Return: string length
- */
+ 
 int getlength(char *string)
 {
 	int x;
@@ -18,6 +18,7 @@ int getlength(char *string)
 		return (x);
 
 }
+*/
 /**
  *print_list - for print a list
  *description: this function for print a the elements of a list_t list.
@@ -26,16 +27,19 @@ int getlength(char *string)
  */
 size_t print_list(const list_t *h)
 {
-	size_t x = 0;
+	size_t x;
 
-	for (x = 0; h->str != NULL; x++)
+	for (x = 0; h; x++)
 	{
-		printf("[%d] %s\n", getlength(h->str), h->str);
-		h = h->next;
-	}
-	if (h->str == NULL)
-	{
-		printf("[%d] %s\n", getlength(h->str), "nil");
+		if (h->str != NULL)
+		{
+		printf("[%d] %s\n", h->len, h->str);
+		}
+		else if (h->str == NULL)
+		{
+			printf("[0] (nil)\n");
+		}
+		 h = h->next;
 	}
 	return (x);
 }
