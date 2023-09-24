@@ -17,8 +17,8 @@ list_t *add_node(list_t **head, const char *str)
 	duplicate = strdup(str);
 	if (node == NULL || duplicate == NULL)
 	{
+	  	free(node);
 		return (NULL);
-		free(node);
 	}
 
 	for (x = 0; str[x] != '\0'; x++)
