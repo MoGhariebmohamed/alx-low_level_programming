@@ -1,44 +1,30 @@
 #include "lists.h"
+#include <string.h>
 /**
- *getlength - to get string length
- *@str: a pointer to string
- *Return: string length
+ *add_node - for add anode at the beginning of a list
+ *description: this function for add anode at the beginning of  list_t list
+ *@str: the list pointer
+ *@head: pointer to the head
+ *Return: adress of new element or NULL if failed
  */
-int getlength(char *string)
+list_t *add_node(list_t **head, const char *str)
 {
-	int x = 0;
+	int x;
+	char *duplicate;
+	list_t *node;
 
-	if (string == NULL)
-	return (0);
-	for (x = 0; *string != '\0'; x++)
+	node = malloc(sizeof(list_t));
+	duplicate = strdup(str);
+	if (node == NULL || duplicate == NULL)
 	{
-		x += x ;
+	       return (NULL);
 	}
-	return (x);
-	
-}
-/**
- *print_list - for print a list 
- *description: this function for print a the elements of a list_t list.
- *@s: the list pointer
- *Return: number if nodes if exist 
- */
-size_t print_list(const list_t *h)
-{
-	size_t x = 0;
-
-	while (h != NULL)
+	for (x = 0; str[x]; x++)
 	{
-		if (h->str != NULL)
-		{
-		printf("[%d] %s\n", getlength(h->str), h->str);
-		}
-		else if (h->str == NULL)
-		{
-			printf("[%d] %s\n", getlength(h->str), "nil");
-		}
-		h = h->next;
-		x++;
+		(*node).str = duplicate;
+		(*node).len = x;
+		(*node).next = *head;
 	}
-	return (x);
+		 *head = node;
+	return (node);
 }
