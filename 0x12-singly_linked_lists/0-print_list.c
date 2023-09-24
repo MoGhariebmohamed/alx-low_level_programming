@@ -1,25 +1,5 @@
 #include "lists.h"
 /**
- *getlength - to get string length
- *description: the function to get length of a string
- *@string: a pointer to string
- *Return: string length
- 
-int getlength(char *string)
-{
-	int x;
-
-	if (string == NULL)
-	return (0);
-	for (x = 1; string[x] != '\0'; x++)
-	{
-		x += 1;
-	}
-		return (x);
-
-}
-*/
-/**
  *print_list - for print a list
  *description: this function for print a the elements of a list_t list.
  *@h: the list pointer
