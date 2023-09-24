@@ -20,7 +20,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (duplicate == NULL)
 	{
 		free(new);
-		return(NULL);
+		return (NULL);
 	}
 	for (x = 0; str[x] != '\0'; x++)
 	{
