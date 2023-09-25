@@ -1,5 +1,5 @@
 #include<stdio.h>
-void before_exe(void) __attribute__((constructor));
+void befor_exe(void) __attribute__((constructor));
 /**
  *befor_exe - the function to be done befor compiling
  *description: this function to print string befor main
