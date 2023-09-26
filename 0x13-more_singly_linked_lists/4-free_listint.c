@@ -10,7 +10,7 @@ void free_listint(listint_t *head)
 	listint_t *x;
 	unsigned int i;
 
-	for (i = 0; head->next != NULL; i++)
+	for (i = 0; head != NULL; i++)
 	{
 		x = head->next;
 		free(head);
