@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *free_listint - for free of list of int
+ *free_listint2 - for free of list of int
  *description: this function for free the elements of a listint_t list.
  *@head: the list pointer
  *Return: nothing
