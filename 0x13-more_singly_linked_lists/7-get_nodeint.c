@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *get_nodeint_at_index - for get  nth node 
+ *get_nodeint_at_index - for get  nth node
  *description: this function for gret nth node  of a listint_t list.
  *@head: the list pointer
  *@index: index of the node, starting at 0
@@ -14,8 +14,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	{
 	if (head == NULL)
 		return (NULL);
-	else
+	else if (head != NULL)
+	{
 		head = head->next;
+	}
 	}
 	return (head);
 }
