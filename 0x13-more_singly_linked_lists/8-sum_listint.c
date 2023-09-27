@@ -12,7 +12,7 @@ int sum_listint(listint_t *head)
 
 	if (head == NULL)
 		return (0);
-	for (i = 0; head != NULL; i++)
+	for (i = 0; head->n != '\0'; i++)
 	{
 
 		total += head->n;
