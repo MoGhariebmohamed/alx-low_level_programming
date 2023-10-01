@@ -3,21 +3,27 @@
  *print_binary - for prints the binary representation of a number
  *description: this function for prints the binary representation of a number
  *@n: the binary  pointer
- *Return: number unsigned or 0
+ *Return: nothing
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int x;
 
-	if (*b == '\0')
-		return (0);
-
-	for (x = 0; *b != '\0'; )
+	if (n  == '\0')
+		return;
+	if (n == 0)
 	{
-		if (*b != '0' && *b != '1')
-			return (0);
-
-		x = x * 2 + (*b++ - 48);
+		_putchar('0');
 	}
-	return (x);
+	else if (n > 0)
+	{
+		print_binary(n >> 1);
+		if ((n & 1) == 1)
+		{
+			_putchar('1');
+		}
+		else
+		{
+			_putchar('0');
+		}
+	}
 }
