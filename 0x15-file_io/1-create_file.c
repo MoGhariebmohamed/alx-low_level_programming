@@ -18,6 +18,10 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
+	openfile = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	if (openfile == -1)
+		return (-1);
+	
 	if (text_content != NULL)
 	{
 		x = 0;
@@ -25,16 +29,13 @@ int create_file(const char *filename, char *text_content)
 		{
 			x++;
 		}
-	}
-
-	openfile = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if (openfile == -1)
-		return (-1);
 
 	openfile = write(openfile, text_content, x);
 	if (openfile == -1)
 	{
+		write(1, "fails", 1);
 		return (-1);
+	}
 	}
 	close(openfile);
 	return (1);
