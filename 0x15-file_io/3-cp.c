@@ -27,7 +27,7 @@ int main(int count, char **str)
 		dprintf(STDERR_FILENO, CNTREAD, str[1]);
 		exit(98);
 	}
-	file_to = open(str[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	file_to = open(str[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, CNTWRITE, str[2]);
