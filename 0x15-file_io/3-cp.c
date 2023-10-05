@@ -27,14 +27,14 @@ int main(int count, char **str)
 		dprintf(STDERR_FILENO, CNTREAD, str[1]);
 		exit(98);
 	}
-	file_to = open(str[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	file_to = open(str[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, CNTWRITE, str[2]);
 		exit(99);
 	}
 	file_from = file_to = 0;
-	while ((x = read(file_from, buffer, 2000)) > 0)
+	while ((x = read(file_from, buffer, 1024)) > 0)
 	{
 		if (write(file_to, buffer, x) != x)
 		{
