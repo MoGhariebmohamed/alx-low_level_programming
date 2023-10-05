@@ -34,7 +34,7 @@ int main(int count, char **str)
 		exit(99);
 	}
 	file_from = file_to = 0;
-	while ((x = read(file_from, buffer, 1024)) > 0)
+	while ((x = read(file_from, buffer, 2000)) > 0)
 	{
 		if (write(file_to, buffer, x) != x)
 		{
