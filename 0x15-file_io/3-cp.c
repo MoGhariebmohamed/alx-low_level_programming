@@ -12,7 +12,7 @@
  */
 int main(int count, char **str)
 {
-	int file_from, file_to, close_from, close_to;
+	int file_from = 0, file_to = 0, close_from, close_to;
 	char buffer[1024];
 	ssize_t x;
 
