@@ -35,11 +35,13 @@ int main(int count, char **str)
 	}
 	file_from = file_to = 0;
 	while ((x = read(file_from, buffer, 1024)) > 0)
+	{
 		if (write(file_to, buffer, x) != x)
 		{
 			dprintf(STDERR_FILENO, CNTWRITE, str[2]);
 			exit(99);
 		}
+	}
 	if (x == -1)
 	{
 		dprintf(STDERR_FILENO, CNTREAD, str[2]);
