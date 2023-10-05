@@ -30,7 +30,6 @@ int main(int count, char **str)
 	file_to = open(str[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
-		close(file_from);
 		dprintf(STDERR_FILENO, CNTWRITE, str[2]);
 		exit(99);
 	}
