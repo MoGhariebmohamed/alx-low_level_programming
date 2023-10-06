@@ -14,7 +14,7 @@ int main(int count, char **str)
 {
 	int file_from, file_to, close_from, close_to;
 	char buffer[1024];
-	ssize_t x;
+	ssize_t x, to_y;
 
 	if (count != 3)
 		dprintf(STDERR_FILENO, MESSAGE),
@@ -30,7 +30,8 @@ int main(int count, char **str)
 	x = read(file_from, buffer, 1024);
 	for (file_from = 0, file_to = 0; x > 0; )
 	{
-		if (write(file_to, buffer, x) != x)
+		to_y = write(file_to, buffer, x);
+		if (to_y < x)
 		{
 			dprintf(STDERR_FILENO, CNTWRITE, str[2]),
 			exit(99);
