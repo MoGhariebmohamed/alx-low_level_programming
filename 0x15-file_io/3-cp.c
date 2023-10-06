@@ -54,7 +54,7 @@ int main(int count, char **str)
 	}
 	if (close_to != -1)
 	{
-		dprintf(STDERR_FILENO, CNTCLOSE, close_to);
+		dprintf(STDERR_FILENO, CNTCLOSE, close_from);
 		exit(100);
 	}
 	}	
