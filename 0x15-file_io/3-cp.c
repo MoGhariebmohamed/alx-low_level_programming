@@ -17,47 +17,35 @@ int main(int count, char **str)
 	ssize_t x;
 
 	if (count != 3)
-	{
-		dprintf(STDERR_FILENO, MESSAGE);
+		dprintf(STDERR_FILENO, MESSAGE),
 			exit(97);
-	}
 	file_from = open(str[1], O_RDONLY);
 	if (file_from < 0)
-	{
-		dprintf(STDERR_FILENO, CNTREAD, str[1]);
+		dprintf(STDERR_FILENO, CNTREAD, str[1]),
 		exit(98);
-	}
 	file_to = open(str[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to < 0)
-	{
-		dprintf(STDERR_FILENO, CNTWRITE, str[2]);
+		dprintf(STDERR_FILENO, CNTWRITE, str[2]),
 		exit(99);
-	}
 	x = read(file_from, buffer, 1024);
 	for (file_from = 0, file_to = 0; x > 0; )
 	{
 		if (write(file_to, buffer, x) != x)
 		{
-			dprintf(STDERR_FILENO, CNTWRITE, str[2]);
+			dprintf(STDERR_FILENO, CNTWRITE, str[2]),
 			exit(99);
 		}
 	if (x < 0)
-	{
-		dprintf(STDERR_FILENO, CNTREAD, str[2]);
+		dprintf(STDERR_FILENO, CNTREAD, str[2]),
 		exit(98);
-	}
 	close_from = close(file_from);
 	close_to = close(file_to);
 	if (close_to < 0)
-	{
-		dprintf(STDERR_FILENO, CNTCLOSE, close_from);
+		dprintf(STDERR_FILENO, CNTCLOSE, close_from),
 		exit(100);
-	}
 	if (close_from < 0)
-	{
-		dprintf(STDERR_FILENO, CNTCLOSE, close_from);
+		dprintf(STDERR_FILENO, CNTCLOSE, close_from),
 		exit(100);
-	}
 	}
 	return (EXIT_SUCCESS);
 }
