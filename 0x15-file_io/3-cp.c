@@ -33,7 +33,8 @@ int main(int count, char **str)
 		dprintf(STDERR_FILENO, CNTWRITE, str[2]);
 		exit(99);
 	}
-	for (file_from = 0, file_to = 0; (x = read(file_from, buffer, 1024)) > 0; )
+	x = read(file_from, buffer, 1024);
+	for (file_from = 0, file_to = 0; x > 0; )
 	{
 		if (write(file_to, buffer, x) != x)
 		{
@@ -44,7 +45,6 @@ int main(int count, char **str)
 	{
 		dprintf(STDERR_FILENO, CNTREAD, str[2]);
 		exit(98);
-	}
 	}
 	close_from = close(file_from);
 	close_to = close(file_to);
@@ -57,6 +57,7 @@ int main(int count, char **str)
 	{
 		dprintf(STDERR_FILENO, CNTCLOSE, close_from);
 		exit(100);
+	}
 	}
 	return (EXIT_SUCCESS);
 }
