@@ -22,7 +22,7 @@ int main(int count, char **str)
 			exit(97);
 	}
 	file_from = open(str[1], O_RDONLY);
-	if (file_from == -1)
+	if (file_from == '\0')
 	{
 		dprintf(STDERR_FILENO, CNTREAD, str[1]);
 		exit(98);
