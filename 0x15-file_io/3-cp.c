@@ -40,11 +40,11 @@ int main(int count, char **str)
 			dprintf(STDERR_FILENO, CNTWRITE, str[2]);
 			exit(99);
 		}
-	}
 	if (x == -1)
 	{
 		dprintf(STDERR_FILENO, CNTREAD, str[2]);
 		exit(98);
+	}
 	}
 	close_from = close(file_from);
 	close_to = close(file_to);
