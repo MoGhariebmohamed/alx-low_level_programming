@@ -33,7 +33,6 @@ int main(int count, char **str)
 		dprintf(STDERR_FILENO, CNTWRITE, str[2]);
 		exit(99);
 	}
-	file_from = file_to = 0;
 	for (file_from = 0, file_to = 0; (x = read(file_from, buffer, 1024)) > 0; )
 	{
 		if (write(file_to, buffer, x) != x)
