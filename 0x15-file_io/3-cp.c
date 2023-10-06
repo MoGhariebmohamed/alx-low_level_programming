@@ -12,7 +12,7 @@
  */
 int main(int count, char **str)
 {
-	int file_from = 0, file_to = 0, close_from, close_to;
+	int file_from, file_to, close_from, close_to;
 	char buffer[1024];
 	ssize_t x;
 
@@ -34,7 +34,7 @@ int main(int count, char **str)
 		exit(99);
 	}
 	file_from = file_to = 0;
-	while ((x = read(file_from, buffer, 1024)) > 0)
+	for (file_from = 0, file_to = 0; (x = read(file_from, buffer, 1024)) > 0; )
 	{
 		if (write(file_to, buffer, x) != x)
 		{
