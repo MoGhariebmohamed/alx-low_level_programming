@@ -45,7 +45,6 @@ int main(int count, char **str)
 		dprintf(STDERR_FILENO, CNTREAD, str[2]);
 		exit(98);
 	}
-	}
 	close_from = close(file_from);
 	close_to = close(file_to);
 	if (close_to != -1)
@@ -58,5 +57,6 @@ int main(int count, char **str)
 		dprintf(STDERR_FILENO, CNTCLOSE, close_to);
 		exit(100);
 	}
+	}	
 	return (EXIT_SUCCESS);
 }
