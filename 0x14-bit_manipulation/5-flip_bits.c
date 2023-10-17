@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *flip_bits - for return returns the number of bits 
- *description: this function for returns the number of bits 
+ *flip_bits - for return returns the number of bits
+ *description: this function for returns the number of bits
  *@n: the binary  pointer
  *@m: the index, starting from 0 of the bit you want to get
  *Return: value of the bit at index index or -1 if an error occured
