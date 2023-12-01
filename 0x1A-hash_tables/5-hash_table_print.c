@@ -4,6 +4,7 @@
 #include "hash_tables.h"
 /**
  *hash_table_print -  that prints a hash table.
+ *Description: theis function to get values from table
  *@ht: the hash table
  *Return: the value associated with the element, or NULL
  */
