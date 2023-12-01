@@ -1,22 +1,30 @@
-#include "main.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "hash_tables.h"
+
 /**
- *_strcat - for reset value
- *description: this function for charachter check
- *@dest: the int pointer for a
- *@src: the pointer for b
- *Return: void
- */
+ *hash_table_create - for creating a hash table
+ *description: this function for creating a hash table
+ *@size: the int pointer for a
+ *Return: Null if fail to malloc or the Hash table
+*/
 
-char *_strcat(char *dest, char *src)
+hash_table_t *hash_table_create(unsigned long int size)
 {
-	int x;
-	int y;
+	hash_table_t *NewTable;
+	unsigned int x;
 
-	for (x = 0; dest[x]; x++)
-		;
-	for (y = 0; src[y]; y++)
+	NewTable = malloc(sizeof(hash_table_t));
+	if (NewTable == NULL)
+		return (NULL);
+	NewTable->size = size;
+	NewTable->array = malloc(sizeof(hash_node_t *) * size);
+	if (NewTable->array == NULL)
+		return (NULL);
+	for (x = 0; x < size; x++)
 	{
-	dest[x++] = src[y];
+	NewTable->array[x] = NULL;
 	}
-	return (dest);
+	return (NewTable);
 }
